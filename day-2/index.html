@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Meie+Script&display=swap" rel="stylesheet">
+
+    <style>
+        p{
+            color:red;
+            color:rgba(3, 227, 252,0.5);
+            color:#260a63;
+        }
+        #heading{
+            color:rgb(243, 76, 10);
+            padding-top: 20px;
+            background-color: blanchedalmond;
+            background-image: url(../../day-1/images/Screenshot.png);
+            height:300px;
+            width:500px;
+            background-position-x: center;
+            background-position-y: center;
+            border:1px solid burlywood;
+            border-radius: 10px;
+            outline-style: outset;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: underline;
+            text-decoration-color: rgb(7, 219, 89);
+            text-transform: uppercase;
+            letter-spacing: 0px;
+            text-shadow: 2px 2px 5px rgb(167, 223, 12),0px 0px 3px rgb(190, 7, 172);
+            font-family: 'Meie Script', cursive;
+            font-size:large;
+        }
+         
+        .linkstyle:link{
+            color:green;
+            text-decoration:none;
+        }
+        .linkstyle:hover{
+            color:aquamarine;
+            text-decoration:none;
+        }
+        .linkstyle:active{
+            color:yellow;
+            text-decoration:none;
+        }
+        .linkstyle:visited{
+            color:purple;
+            text-decoration:none;
+        }
+
+        .listcss{
+            list-style-image: url(../../day-1/images/favicon.ico);
+            list-style-position:outside;
+        }
+
+    </style>
+</head>
+<body>
+    <p>hey this is tag selector</p>
+    <h1 id="heading">this is heading one</h1>
+    <h2 id="heading">this is heading two</h2>
+    <h3 id="heading">this is heading three</h3>
+    <h4 id="heading">this is heading four</h4>
+
+    <ul class="listcss">
+        <li>list one</li>
+        <li>list two</li>
+        <li>list three</li>
+    </ul>
+
+    <a class="linkstyle" href="#">this is link</a>
+</body>
+</html>

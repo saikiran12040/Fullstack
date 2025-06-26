@@ -194,7 +194,7 @@
         Your browser does not support the audio tag.
     </audio>
     <br>
-    <iframe src="https://www.youtube.com/watch?autoplay=1&muted=1" width="560" height="350" allowfullscreen>
+    <iframe src="https://www.youtube.com/watch?autoplay=1&muted=1" width="560" height="350" allowfullscreen></iframe>
         <br>
         <br>
     <form>
@@ -215,13 +215,23 @@
         <label for="w2">Brock Lesnar</label><br>
         <input type="checkbox" id="w3" name="wrestler" value="omos">
         <label for="w3">Omos</label><br>
-        <select id="country" name="country">
+        <select id="country" name="country" size="1">
             <option value="india">India</option>
             <option value="usa">USA</option>
             <option value="canada">Canada</option>
             <option value="australia">Australia</option>
             <option value="uk">UK</option>
         </select>
+        <br><br>
+        <input type="submit" value="Submit">
     </form>
+
+
+    <fieldset>
+        <legend>user information</legend>
+        <input type="fname" name="fname" placeholder="enter your first name">
+        <input type="lname" name="lname" placeholder="enter yout last name">
+    </fieldset>
+    <input type="datetime-local" name="meeting-time">
 </body>
 </html>
