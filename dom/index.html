@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #outside{
+        height:400px;
+        width:400px;
+        background-color: antiquewhite;
+        border:1px solid rgb(12, 12, 12);
+        border-radius:5px;
+        position:relative;
+    }
+    #inside{
+        height:100px;
+        width:100px;
+        border:1px solid black;
+        border-radius: 5px;
+        background-color: rgba(212, 0, 255, 0.916);
+        position:absolute;
+    }
+    .event{
+        height:100px;
+        width:100px;
+        border:1px solid black;
+        background-color: blanchedalmond;
+    }
+</style>
+<body>
+    <div>
+        <ul>
+            <li class="leader" id="king">Lion</li>
+            <li class="Hunter">Tiger</li>
+            <li class="gymnast">leopard</li>
+            <li>cheetah</li>
+            <li class="Hunter">jaguar</li>
+        </ul>
+    </div>
+
+    <div id="outside">
+        <div id="inside"></div>
+    </div>
+    <button onclick="movebox(this)">click me</button>
+    <div class="event">event listener</div>
+    <script src="script.js"></script>
+</body>
+</html>
