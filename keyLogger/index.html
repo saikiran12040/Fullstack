@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding-top:50px;
+    }
+    .btn-container{
+        display:flex;
+        flex-direction:row;
+        margin-top: 20px;
+        justify-content: center;
+    }
+    #log,#state{
+        border:1px solid black;
+        background-color: blanchedalmond;
+        width:600px;
+        margin:20px;
+        border-radius:10px;
+        height:80px;
+        color: black;
+        text-align: center;
+        font-size: large;
+    }
+    button{
+        padding:20px 40px;
+        border-radius: 20px;
+        margin:20px;
+        border:none;
+    }
+    button:hover{
+        border:0.1px solid black;
+        box-shadow:0px 5px 15px rgba(0,0,0,0.3);
+    }
+</style>
+<body>
+    <div class="container">
+        <h1 style="border:2px solid black;border-radius:10px;font:bold;padding:5px;">KeyLogger</h1>
+        <p>Don't forget to subscribe to our channel</p>
+        <div class="btn-container">
+            <button id="startBtn">start logging keypresses</button>
+            <button id="stopBtn">stop logging keypresses</button>
+        </div>
+        <div class="btn-container">
+            <div id="log"></div>
+            <div id="state"></div>
+        </div>
+    </div>
+    <script src="./script.js">
+    </script>
+</body>
+</html>
