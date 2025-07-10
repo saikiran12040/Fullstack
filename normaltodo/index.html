@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="taskInput" />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      let tasks = [];
+
+      function addTask() {
+        let taskInput = document.getElementById("taskInput");
+        let task = taskInput.value.trim();
+        let taskList = document.getElementById("taskList");
+        if (task) {
+          tasks.push(task);
+          taskInput.value = "";
+        }
+
+        taskList.innerHTML = ""; 
+        tasks.forEach((task, index) => {
+          let li = document.createElement("li");
+          li.textContent = task;
+
+          let deleteBtn = document.createElement("button");
+          deleteBtn.textContent = "Delete";
+
+          deleteBtn.addEventListener("click", () => {
+            tasks.splice(index, 1);
+            addTask();
+          });
+
+          let updateBtn = document.createElement("button");
+          updateBtn.textContent = "Update";
+
+          updateBtn.addEventListener("click", () => {
+            let newTask = prompt("update task", task);
+            if (newTask) {
+              tasks[index] = newTask.trim();
+              addTask();
+            }
+          });
+          li.append(deleteBtn, updateBtn);
+          taskList.appendChild(li);
+        });
+      }
+    </script>
+  </body>
+</html>
