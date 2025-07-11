@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <div id="timer"></div>
+    
+    <script>
+        let timer=document.getElementById("timer");
+        let countStart=60
+
+        function updateTime(){
+            let minutes=Math.floor(countStart/60);
+            let seconds=countStart%60;
+
+            let formatTime=`${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+            timer.textContent=formatTime;
+        }
+
+        function count(){
+            if(countStart>0){
+                countStart--;
+                updateTime()
+            } else {
+                clearInterval(time);
+                alert("Time's up!");
+            }
+        }
+
+        setInterval(count,1000);
+        updateTime();
+    </script>
+</body>
+</html>
