@@ -78,3 +78,23 @@ fetch('https://jsonplaceholder.typicode.com/posts',{
         'Content-type':'application/json; charset=UTF-8',
     }
 }).then(res=>res.json()).then(data=>data.forEach(post=>console.log(post.title)))
+
+
+// this is some problem when given month and year it will return the number of days in that month 
+function isLeapYear(year){
+    return (year%4===0 && year%100!==0) || (year%400===0);
+}
+
+function days(month,year){
+    if(month===2){
+        return isLeapYear(year) ? 29 :28;
+    } else if ([4,6,9,11].includes(month)) {
+        return 30;
+    } else {
+        return 31
+    }
+}
+
+console.log(days(2,2020))
+console.log(days(2,2021))
+console.log(days(2,1700))
