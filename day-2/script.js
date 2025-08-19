@@ -98,3 +98,28 @@ function days(month,year){
 console.log(days(2,2020))
 console.log(days(2,2021))
 console.log(days(2,1700))
+
+
+function debounce(fn, delay) {
+    let timer;
+    return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
+
+// Usage:
+window.addEventListener('resize', debounce(() => {
+    console.log('Window resized!');
+}, 500));function debounce(fn, delay) {
+    let timer;
+    return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
+
+// Usage:
+window.addEventListener('resize', debounce(() => {
+    console.log('Window resized!');
+}, 500));
